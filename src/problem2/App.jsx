@@ -96,6 +96,12 @@ export default function App() {
   }
   useEffect(load, [])
 
+  useEffect(() => {
+  if (!done) return
+  const t = setTimeout(() => setDone(null), 5000)
+  return () => clearTimeout(t)
+}, [done])
+
   const price = useMemo(() => Object.fromEntries(tokens.map((t) => [t.currency, t.price])), [tokens])
   const rate = price[from] / price[to]
   const n = parseFloat(amount)
