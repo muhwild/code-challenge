@@ -1,4 +1,6 @@
 import React, { useMemo } from 'react';
+import type { BoxProps } from './stubs';
+import { useStyles, useWalletBalances, usePrices, WalletRow } from './stubs';
 
 interface WalletBalance {
   currency: string;

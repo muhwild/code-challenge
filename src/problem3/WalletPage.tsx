@@ -1,5 +1,6 @@
 import React, { useMemo } from 'react';
-
+import type { BoxProps } from './stubs';
+import { useStyles, useWalletBalances, usePrices, WalletRow } from './stubs';
 // ISSUE: WalletBalance had no blockchain field, but the original code
 //       reads balance.blockchain. That does not compile in TypeScript.
 // FIX:  add blockchain: string.
